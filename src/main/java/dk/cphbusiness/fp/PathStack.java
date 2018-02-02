@@ -20,5 +20,12 @@ public class PathStack<T> implements Stack<T> {
     return elements == null;
     }
   
+  public void print() { print(elements); }
+      
+  private void print(Path<T> path) {
+    if (path == null) return;
+    print(path.getRest());
+    System.out.println(">"+path.getFirst());
+    }
 
   }
